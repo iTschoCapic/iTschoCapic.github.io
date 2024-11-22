@@ -9,7 +9,6 @@
     position: absolute;
     pointer-events: none; /* Allow interaction with elements on top */
     z-index: -1; /* Keep it behind the header content */
-    border: solid 0.2rem red;
 }
 
 .header .text-header #stars {
