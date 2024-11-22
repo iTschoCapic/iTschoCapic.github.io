@@ -1,0 +1,115 @@
+:root {
+    --shadows-small: multiple-box-shadow(700);
+    --shadows-medium: multiple-box-shadow(200);
+    --shadows-big: multiple-box-shadow(100);
+    --shadows-shooting: multiple-box-shadow(1);
+}
+
+.header .text-header .stars_animation {
+    position: absolute;
+    pointer-events: none; /* Allow interaction with elements on top */
+    z-index: -1; /* Keep it behind the header content */
+    border: solid 0.2rem red;
+}
+
+.header .text-header #stars {
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: var(--shadows-small);
+    animation: animStar 50s linear infinite;
+}
+  
+.header .text-header #stars::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: var(--shadows-small);
+}
+  
+.header .text-header #stars2 {
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: var(--shadows-medium);
+    animation: animStar 100s linear infinite;
+}
+  
+.header .text-header #stars2::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: var(--shadows-medium);
+}
+  
+.header .text-header #stars3 {
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow: var(--shadows-big);
+    animation: animStar 150s linear infinite, twinkle 5s linear infinite;
+}
+  
+.header .text-header #stars3::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow: var(--shadows-big);
+}
+
+.header .text-header #shooting-star {
+    width: 5px;
+    height: 5px;
+    background: transparent;
+    box-shadow: var(--shadows-shooting);
+    animation: animShootingStar 10s linear infinite;
+}
+
+.header .text-header #shooting-star:after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    width: 5px;
+    height: 5px;
+    background: transparent;
+    box-shadow: var(--shadows-shooting);
+}
+
+@keyframes animStar {
+    from {
+        transform: translate(0vh);
+    }
+    to {
+        transform: translate(-20vh, -50vh);
+    }
+}
+
+@keyframes animShootingStar {
+    from {
+        transform: translate(0vh);
+    }
+    to {
+        transform: translate(300vh, -40vh);
+    }
+}
+
+@keyframes twinkle {
+    0% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }

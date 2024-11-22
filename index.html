@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Welcome to my website/portfolio showing my work in game development">
+        <meta property="og:title" content="Renaud MACHECOURT-BOURGEOIS">
+        <title>Home | Renaud Machecourt</title>
+        <link rel="stylesheet" href="./styles/style_index.css">
+        <link rel="stylesheet" href="./styles/stars.css">
+        <link rel="manifest" type="application/manifest+json" href="./resources/icons/icons.webmanifest">
+        <link rel="icon" href="./resources/images/logo/" type="image/x-icon">
+        <script src="./stars.js"></script>
+    </head>
+    <body>
+        <div class="header" id="header">
+            <div class="container">
+                <div class="logo">
+                    <a href="./index.html"><img src="./resources/images/logo/logo.jpg" alt="Logo"></a>
+                </div>
+                <nav class="navbar">
+                    <div class="onglets">
+                        <a href="./index.html">Home</a>
+                        <a href="./index.html#projects">Projects</a>
+                        <a href="./about-me.html">About Me</a>
+                        <a href="./contact.html">Contact</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="text-header" id="text-header">
+                <div class="links">
+                    <h1>Renaud <br>MACHECOURT-BOURGEOIS</h1>
+                    <div class="socials">
+                        <a href="https://github.com/iTschoCapic"><img src="./resources/images/logo/GitHub.png" alt="GitHub Logo"></a>
+                        <a href="https://www.linkedin.com/in/renaud-machecourt-bourgeois/"><img src="./resources/images/logo/LinkedIn.png" alt="LinkedIn Logo"></a>
+                        <!-- <a href="https://itschocapic.github.io/"><img src="" alt=""></a> -->
+                    </div>
+                </div>
+                    
+                <img src="./resources/images/photo.jpg" alt="">
+                <div class="stars_animation">
+                    <div id="stars"></div>
+                    <div id="stars2"></div>
+                    <div id="stars3"></div>
+
+                    <div id="shooting-star"></div>
+                </div>
+            </div>
+        </div>
+        <main>
+            <div class="skills" id="skills">
+                <h2>Skills</h2>
+                <div class="categories-container">
+                    <div class="category">
+                        <h3>Languages</h3>
+                        <div class="skill">C/C#/C++</div>
+                        <div class="skill">Java</div>
+                        <div class="skill">Lua</div>
+                    </div>
+                    <div class="category">
+                        <h3>Game Engine</h3>
+                        <div class="skill">Unity</div>
+                        <div class="skill">Unreal</div>
+                        <div class="skill">Godot</div>
+                    </div>
+                    <div class="category">
+                        <h3>Tools</h3>
+                        <div class="skill">Git</div>
+                        <div class="skill">Docker</div>
+                        <div class="skill">VS Code</div>
+                    </div>
+                </div>
+            </div>
+            <div class="projects" id="projects">
+                <h2>Selected Projects</h2>
+                <div class="cards-container">
+                    <div class="card">
+                        <h3>Le Castell Canet - Website</h3>
+                        <img src="./resources/images/lecastellcanet.png" alt="Le Castell Canet">
+                        <p>Developed a <b>full-stack website</b> from concept to deployment, handling both front-end and back-end development tasks.</p>
+                        <a href="./lecastellcanet.html">See more...</a>
+                        <div class="technologies">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JS</span>
+                            <span>FTP</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>W.I.P. Geometrical Modelisation Quadtree - Unity</h3>
+                        <img src="./resources/images/background.png" alt="3D volumetric representation of a sphere">
+                        <p>I developed a <b>recursive algorithm</b> to create a <b>3D volumetric representation of spheres using spatial enumeration</b>. The approach involves subdividing a bounding box into smaller cubes, allowing for efficient representation and manipulation of 3D objects. The algorithm supports the addition of multiple spheres, dynamically adjusting the bounding box to encompass all objects.</p>
+                        <a href="./geomod.html">See more...</a>
+                        <div class="technologies">
+                            <span>C#</span>
+                            <span>Unity</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>W.I.P. Havoc - Unity</h3>
+                        <img src="./resources/images/WIP.png" alt="">
+                        <p>A 3D fps low poly game</p>
+                        <a href="./havoc.html">See more...</a>
+                        <div class="technologies">
+                            <span>C#</span>
+                            <span>Unity</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="contacts">
+                <div class="github"><a href="https://github.com/iTschoCapic"><img src="./resources/images/logo/GitHub.png" alt="GitHub Logo"></a></div>
+                <div class="linkedin"><a href="https://www.linkedin.com/in/renaud-machecourt-bourgeois/"><img src="./resources/images/logo/LinkedIn.png" alt="LinkedIn Logo"></a></div>
+                <div class="mail"><a href="mailto:renaud.mb.58@gmail.com"><img src="./resources/images/logo/Gmail.png" alt=""></a></div>
+                <div class="curriculum-vitae"><a href="./curriculum-vitae.html">Curriculum Vitae</a></div>
+            </div>
+        </footer>
+    </body>
+</html>

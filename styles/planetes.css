@@ -1,0 +1,156 @@
+:root {
+    --shadows-mercury: mercury();
+    --shadows-venus: venus();
+    --shadows-earth: earth();
+    --shadows-mars: mars();
+    --shadows-jupiter: jupiter();
+    --shadows-saturne: saturne();
+    --shadows-neptune: neptune();
+    --shadows-sun: sun();
+}
+
+.planetes_animation {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-25%, -50%); /* Center container of planets */
+    pointer-events: none; /* Allow interaction with elements on top */
+    z-index: -1;
+}
+
+#sun {
+    width: 50px; /* Size of the Sun */
+    height: 50px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the sun */
+    box-shadow: 0 0 50px yellow;
+}
+
+@keyframes rotateMercury {
+    from {
+        transform: rotate(0deg) translateX(60px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translateX(60px) rotate(-360deg);
+    }
+}
+#mercury {
+    width: 3px;
+    height: 3px;
+    background-color: gray;
+    border-radius: 50%;
+    position: absolute;
+    animation: rotateMercury 2s linear infinite; /* Increased time for slower speed */
+}
+
+/* Venus */
+@keyframes rotateVenus {
+    from {
+        transform: rotate(0deg) translateX(90px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translateX(90px) rotate(-360deg);
+    }
+}
+#venus {
+    width: 5px;
+    height: 5px;
+    background-color: #e8a600;
+    border-radius: 50%;
+    position: absolute;
+    animation: rotateVenus 3s linear infinite; /* Increased time for slower speed */
+}
+
+/* Earth */
+@keyframes rotateEarth {
+    from {
+        transform: rotate(0deg) translateX(120px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translateX(120px) rotate(-360deg);
+    }
+}
+#earth {
+    width: 6px;
+    height: 6px;
+    background-color: #1f78d1;
+    border-radius: 50%;
+    position: absolute;
+    animation: rotateEarth 6s linear infinite; /* Increased time for slower speed */
+}
+
+/* Mars */
+@keyframes rotateMars {
+    from {
+        transform: rotate(0deg) translateX(150px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translateX(150px) rotate(-360deg);
+    }
+}
+#mars {
+    width: 4px;
+    height: 4px;
+    background-color: #d85b3e;
+    border-radius: 50%;
+    position: absolute;
+    animation: rotateMars 12s linear infinite; /* Increased time for slower speed */
+}
+
+/* Jupiter */
+@keyframes rotateJupiter {
+    from {
+        transform: rotate(0deg) translateX(250px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translateX(250px) rotate(-360deg);
+    }
+}
+#jupiter {
+    width: 67px;
+    height: 67px;
+    background-color: #c67c38;
+    border-radius: 50%;
+    position: absolute;
+    animation: rotateJupiter 30s linear infinite; /* Increased time for slower speed */
+}
+
+/* Saturn */
+@keyframes rotateSaturne {
+    from {
+        transform: rotate(0deg) translateX(350px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translateX(350px) rotate(-360deg);
+    }
+}
+#saturne {
+    width: 60px;
+    height: 60px;
+    background-color: #f4c542;
+    border-radius: 50%;
+    position: absolute;
+    animation: rotateSaturne 60s linear infinite; /* Increased time for slower speed */
+}
+
+/* Neptune */
+@keyframes rotateNeptune {
+    from {
+        transform: rotate(0deg) translateX(450px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translateX(450px) rotate(-360deg);
+    }
+}
+#neptune {
+    width: 54px;
+    height: 54px;
+    background-color: #4e73c5;
+    border-radius: 50%;
+    position: absolute;
+    animation: rotateNeptune 120s linear infinite; /* Increased time for slower speed */
+}
