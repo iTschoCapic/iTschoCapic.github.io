@@ -195,7 +195,9 @@ body .header .logo a img {
 .header .text-header .links .socials a img {
     width: 1.5rem;
     height: 1.5rem;
+    background-color: transparent;
 }
+
 
 .header .text-header img {
     z-index: 1;
@@ -290,6 +292,11 @@ main .skills .categories-container .category:hover .skill:last-child {
 /* -------------------------------------------------- */
 /* --------------------- Cards ---------------------- */
 /* -------------------------------------------------- */
+main .projects .border {
+    padding: 1rem 40rem 0rem 40rem;
+    margin-bottom: 1rem;
+    border-top: solid 0.2rem var(--border);
+}
 
 main .projects {
     margin: 3rem;
@@ -438,25 +445,22 @@ footer {
     box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
-footer .contacts {
-    background-color: var(--background);
-}
-
 footer .contacts a {
     text-decoration: none;
     background-color: var(--background);
 }
 
 footer .contacts a img {
-    width: 1.5rem;
     height: 1.5rem;
+    background-color: var(--background);
 }
 
 footer .contacts {
     display: flex;
-    flex-direction: row; /* Stack items vertically */
+    flex-direction: row;
     gap: 1rem;
     align-items: flex-end;
+    background-color: var(--background);
 }
 
 @media (max-width: 768px) {

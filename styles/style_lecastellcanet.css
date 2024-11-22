@@ -195,6 +195,7 @@ body .header .logo a img {
 .header .text-header .links .socials a img {
     width: 1.5rem;
     height: 1.5rem;
+    background-color: transparent;
 }
 
 .header .text-header img {

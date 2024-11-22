@@ -205,6 +205,7 @@ body .header .logo a img {
 .header .text-header .links .socials a img {
     width: 1.5rem;
     height: 1.5rem;
+    background-color: transparent;
 }
 
 .header .text-header img {
@@ -217,6 +218,21 @@ body .header .logo a img {
 /* -------------------------------------------------- */
 /* ---------------------- Main ---------------------- */
 /* -------------------------------------------------- */
+
+main {
+    padding-bottom: 1rem;
+    margin: 0rem 10rem 0rem 10rem;
+}
+
+main .border {
+    padding: 1rem 0rem 0rem 0rem;
+    margin-top: 2rem;
+    border-top: solid 0.2rem var(--border);
+}
+
+main img {
+    height: 3rem;
+}
 
 main h2 {
     margin-left: -5rem;
@@ -245,15 +261,12 @@ main p i {
     text-align: start;
 }
 
-main {
-    padding-bottom: 1rem;
-    margin: 0rem 10rem 0rem 10rem;
-}
-
-main .border {
-    padding: 1rem 0rem 0rem 0rem;
-    margin-top: 2rem;
-    border-top: solid 0.2rem var(--border);
+main .cv {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    text-align: justify;
+    display: flex;          /* Enable flexbox layout */
+    align-items: center;     /* Vertically center the content */
 }
 
 /* -------------------------------------------------- */
@@ -270,25 +283,22 @@ footer {
     box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
-footer .contacts {
-    background-color: var(--background);
-}
-
 footer .contacts a {
     text-decoration: none;
     background-color: var(--background);
 }
 
 footer .contacts a img {
-    width: 1.5rem;
     height: 1.5rem;
+    background-color: var(--background);
 }
 
 footer .contacts {
     display: flex;
-    flex-direction: row; /* Stack items vertically */
+    flex-direction: row;
     gap: 1rem;
     align-items: flex-end;
+    background-color: var(--background);
 }
 
 @media (max-width: 768px) {
