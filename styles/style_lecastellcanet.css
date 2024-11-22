@@ -206,7 +206,7 @@ body .header .logo a img {
 }
 
 /* -------------------------------------------------- */
-/* ------------------ Explanations ------------------ */
+/* ---------------------- Main ---------------------- */
 /* -------------------------------------------------- */
 
 main h2 {
@@ -257,23 +257,20 @@ footer {
     box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
-footer .contacts {
-    background-color: var(--background);
-}
-
 footer .contacts a {
     text-decoration: none;
     background-color: var(--background);
 }
 
 footer .contacts a img {
-    width: 1.5rem;
     height: 1.5rem;
+    background-color: var(--background);
 }
 
 footer .contacts {
     display: flex;
-    flex-direction: row; /* Stack items vertically */
+    flex-direction: row;
     gap: 1rem;
     align-items: flex-end;
+    background-color: var(--background);
 }
