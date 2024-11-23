@@ -485,6 +485,12 @@ footer .contacts {
         width: 20rem;
     }
 
+    main .projects .border {
+        padding: 1rem 10rem 0rem 10rem;
+        margin-bottom: 1rem;
+        border-top: solid 0.2rem var(--border);
+    }
+
     main .projects .cards-container {
         grid-template-columns: repeat(1, 3fr);
         width: 20rem;
