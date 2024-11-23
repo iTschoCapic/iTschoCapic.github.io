@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Welcome to my website/portfolio showing my work in game development">
+        <meta property="og:title" content="Renaud MACHECOURT-BOURGEOIS">
+        <title>Geometrical Modelisation Quadtree | Renaud Machecourt</title>
+        <link rel="stylesheet" href="../styles/style_geomod.css">
+        <link rel="stylesheet" href="../styles/planetes.css">
+        <link rel="manifest" type="application/manifest+json" href="./resources/icons/icons.webmanifest">
+        <link rel="icon" href="./resources/images/logo/" type="image/x-icon">
+    </head>
+    <body>
+        <div class="header" id="header">
+            <div class="container">
+                <div class="logo">
+                    <a href="../index.html"><img src="../resources/images/logo/logo.jpg" alt="Logo"></a>
+                </div>
+                <nav class="navbar">
+                    <div class="onglets">
+                        <a href="../index.html">Home</a>
+                        <a href="../projects.html">Projects</a>
+                        <a href="../about-me.html">About Me</a>
+                        <a href="../index.html#contacts">Contact</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="text-header" id="text-header">
+                <div class="links">
+                    <h1>Geometrical Modelisation Quadtree</h1>
+                    <div class="socials">
+                        <a href="https://github.com/iTschoCapic"><img src="../resources/images/logo/GitHub.png" alt="GitHub Logo"></a>
+                        <a href="https://www.linkedin.com/in/renaud-machecourt-bourgeois/"><img src="../resources/images/logo/LinkedIn.png" alt="LinkedIn Logo"></a>
+                        <a href="mailto:renaud.mb.58@gmail.com"><img src="../resources/images/logo/Gmail.png" alt=""></a>
+                        <a href="../resources/MACHECOURT-BOURGEOIS_Renaud-Curriculum-Vitae.pdf" download><img src="../resources/images/logo/cv2.png" alt=""></a>
+                    </div>
+                </div>
+                    
+                <img src="../resources/images/background.png" alt="">
+                <div class="planetes_animation">
+                    <div id="mercury"></div>
+                    <div id="venus"></div>
+                    <div id="earth"></div>
+                    <div id="mars"></div>
+                    <div id="jupiter"></div>
+                    <div id="saturne"></div>
+                    <div id="neptune"></div>
+                    <div id="sun"></div>
+                </div>
+            </div>
+        </div>
+        <main>
+            <h2>Adaptative Quadtree Algorithm for 3D volumetric representation of spheres using spatial enumeration</h2>
+            <p>I achieved this during the course named "Geometrical Modelisation". We most of the time work on rendering shapes and models in 3D and then apply algorithm to them. It can range from calculating vertices, triangles and normals to render a model, to mesh simplification and subdivision.</p>
+            <!-- <p><a href="https://github.com/iTschoCapic/modelisation_geometrique">GitHub repository</a> of the project</p> -->
+            </p>
+            <h3>Bounding Boxes</h3>
+                <p><i>This method generates a bounding box for a given sphere in 3D space. A bounding box is the smallest axis-aligned rectangular box that completely encloses the sphere, useful for optimizing collision detection and spatial queries in 3D applications. The method takes a Sphere object as input, which includes the sphere'ws center (sphere.position) and its radius (sphere.radius).</i></p>
+                <h4>How It Works</h4>
+                    <p>To calculate the bounding box, the method determines two key points: the minimum and maximum corners of the box. The minimum corner is calculated by subtracting the sphere's radius from its center in all directions, ensuring the corner lies one radius below the center. Similarly, the maximum corner is calculated by adding the radius to the center, ensuring it extends one radius above. These calculations provide the bounding box's exact dimensions, tightly enclosing the sphere.</p>
+                    <br>
+                    <p>The function constructs a BoundingBox object using these corners and returns it. In practical applications, this bounding box can significantly optimize performance. For example, it simplifies collision detection by allowing initial checks with a box rather than performing complex sphere-object calculations. Additionally, it is useful for spatial partitioning, grouping objects into manageable regions for faster processing in rendering or physics simulations.</p>
+            <h3>Generating First X Cubes</h3>
+                <p><i>The process is divided into two methods: GenerateGlobalRepresentation and GenerateSphere. This code is part of a system for generating 3D representations of spheres within defined bounding boxes, using smaller cubes to approximate their volume. The primary purpose is to efficiently visualize or process intersections, unions, or other spatial relationships between spheres and bounding volumes.</i></p>
+                <br>
+                <p>GenerateGlobalRepresentation acts as the entry point for the system. It iterates through a predefined number of spheres (nOS) and generates individual representations for each one. The method calls GenerateSphere, passing both the sphere and its corresponding bounding box to perform the detailed calculations and cube generation.</p>
+                <br>
+                <p>GenerateSphere is responsible for generating the 3D cube representation for a specific sphere. It begins by calculating the size of each cube (referred to as step) by dividing the width of the bounding box by a resolution value. This ensures the cubes are appropriately sized and distributed within the bounding volume.</p>
+                <br>
+                <p>The method then performs a triple nested loop to iterate through all possible positions within the bounding box grid. For each grid position, it calculates a Vector3 representing the current cube's location. Using this vector, the method evaluates whether various corners of the cube, as well as its center, intersect with the sphere. These checks are crucial for determining if the cube lies entirely within the sphere, partially intersects, or is outside.</p>
+                <br>
+                <p>If all corners and the center of the cube are within the sphere, the method creates a visual cube using the Instantiate function. The cube is centered at the current position, adjusted by half the cube's size (step / 2) to align it correctly, and is scaled to match the cube's dimensions. For more complex cases involving unions or intersections of multiple spheres, the method leverages additional logic to process these relationships.</p>
+                <br>
+                <p>In cases where only part of the cube intersects the sphere, the method recursively subdivides the cube into smaller parts by calling SphereDivision, enabling a finer level of detail and ensuring accurate representation of the sphere's boundary.</p>
+            
+            <h3>Recursive Cube Subdivision</h3>
+                <p>The recursion begins with a cube defined by a Vector3 position and a size (step). The method evaluates whether the cube lies entirely within, partially overlaps, or is outside the sphere. Based on this evaluation, it either generates a cube or subdivides further into smaller cubes.</p>
+                <br>
+                <p>The method first checks if the current division has reached the maximum number of subdivisions. At this point, if the union flag is enabled, it evaluates whether the cube overlaps other geometries to avoid duplicate renderings. For unions and intersections, specialized processing is delegated to UnionSpheres or IntersectSpheres. If neither is required, the method generates a cube centered at the current position, scaled appropriately, and colored based on the recursion level (currentDivision).</p>
+                <br>
+                <p>If further subdivision is required, the cube is divided into eight smaller cubes by halving the size (step / 2) and iterating through all combinations of offsets (0 or newStep) for the x, y, and z axes. For each smaller cube, the method performs sphere intersection tests on its corners and center. This ensures accurate representation of the sphere's boundaries, even at finer resolutions.</p>
+                <br>
+                <p>The method also handles multiple spheres by incrementing a counter whenever a cube's center intersects with a sphere. This allows it to account for overlapping regions in union or intersection operations. When all corners and the center of a cube are within the sphere, a cube is generated or further divided depending on the current mode (union, intersect, or default rendering).</p>
+                <br>
+                <p>By recursively subdividing cubes and evaluating sphere intersections at each level, this method achieves high precision while minimizing redundant calculations. It dynamically adjusts detail based on the sphere's geometry and the current recursion depth, ensuring efficient and accurate representation.</p>
+            <h3>Challenges and Solutions</h3>
+            <p>One of the main challenges encountered in this implementation was avoiding overlapping cube renderings, especially at the edges of spheres where rounding errors or small gaps could occur. To solve this, a Physics.OverlapSphere check was introduced at the final recursion level to detect and prevent redundant cube generation. Another challenge was ensuring smooth and visually consistent transitions between intersecting spheres. This was addressed by dynamically adjusting the recursion depth and ensuring that intersections involved more than one sphere before proceeding with further subdivision.</p>
+            <br>
+            <p>Additionally, handling partial overlaps of cubes with spheres required precise testing of all cube corners and its center against the sphere. This was implemented by performing intersection tests at every recursive step, balancing performance with accuracy.</p>
+            <h3>Skills Gained</h3>
+            <p>This project provided valuable experience in designing and implementing recursive algorithms for spatial subdivision. It enhanced my understanding of 3D geometry and mathematical modeling, particularly in the context of sphere and cube interactions.</p>
+            <br>
+            <p>Through debugging and optimizing the subdivision logic, I developed strong skills in problem-solving and performance optimization. Moreover, the process of dynamically managing recursion depth and handling edge cases strengthened my proficiency in writing robust and scalable code for 3D environments. This experience also deepened my knowledge of graphics rendering pipelines and how spatial partitioning techniques can enhance real-time rendering and simulation efficiency.</p>
+        </main>
+        <footer>
+            <div class="contacts">
+                <h2>Contact:</h2>
+                <div class="github"><a href="https://github.com/iTschoCapic"><img src="../resources/images/logo/GitHub.png" alt="GitHub Logo"></a></div>
+                <div class="linkedin"><a href="https://www.linkedin.com/in/renaud-machecourt-bourgeois/"><img src="../resources/images/logo/LinkedIn.png" alt="LinkedIn Logo"></a></div>
+                <div class="mail"><a href="mailto:renaud.mb.58@gmail.com"><img src="../resources/images/logo/Gmail.png" alt=""></a></div>
+                <div class="curriculum-vitae"><a href="../resources/MACHECOURT-BOURGEOIS_Renaud-Curriculum-Vitae.pdf" download><img src="../resources/images/logo/cv2.png" alt=""></a></div>
+            </div>
+        </footer>
+    </body>
+</html>

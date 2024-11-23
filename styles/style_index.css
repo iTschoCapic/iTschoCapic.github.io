@@ -190,6 +190,7 @@ body .header .logo a img {
 .header .text-header .links .socials a {
     width: 1.5rem;
     height: 1.5rem;
+    background-color: transparent;
 }
 
 .header .text-header .links .socials a img {
@@ -290,7 +291,7 @@ main .skills .categories-container .category:hover .skill:last-child {
 }
 
 /* -------------------------------------------------- */
-/* --------------------- Cards ---------------------- */
+/* ---------------------- Main ---------------------- */
 /* -------------------------------------------------- */
 
 main .projects .border {
@@ -356,12 +357,13 @@ main .projects .cards-container .card:hover h3 {
 }
 
 main .projects .cards-container .card img {
+    border-bottom: solid 0.2rem var(--border);
     width: 29.7rem;
     opacity: 0.8;
 }
 
 main .projects .cards-container .card:hover img {
-    width: 29.7rem;
+    border-bottom: solid 0.2rem var(--ring);
     opacity: 1;
 }
 

@@ -190,6 +190,7 @@ body .header .logo a img {
 .header .text-header .links .socials a {
     width: 1.5rem;
     height: 1.5rem;
+    background-color: transparent;
 }
 
 .header .text-header .links .socials a img {
@@ -209,7 +210,39 @@ body .header .logo a img {
 /* ---------------------- Main ---------------------- */
 /* -------------------------------------------------- */
 
+main {
+    padding-bottom: 1rem;
+    margin: 0rem 10rem 0rem 10rem;
+}
 
+main h2 {
+    margin-left: -5rem;
+    margin-right: -5rem;
+}
+
+main h3 {
+    padding: 1rem 0rem 1rem 0rem;
+    margin-top: 1rem;
+    border-top: solid 0.2rem var(--border);
+    margin-left: -4rem;
+    margin-right: -4rem;
+}
+
+main h4 {
+    margin-left: -3rem;
+    margin-right: -3rem;
+}
+
+main p {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    text-align: justify;
+}
+
+main p i {
+    margin-left: -2rem;
+    text-align: start;
+}
 
 /* -------------------------------------------------- */
 /* --------------------- Footer --------------------- */

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Welcome to my website/portfolio showing my work in game development">
+        <meta property="og:title" content="Renaud MACHECOURT-BOURGEOIS">
+        <title>Projects | Renaud Machecourt</title>
+        <link rel="stylesheet" href="./styles/style_projects.css">
+        <link rel="stylesheet" href="./styles/stars.css">
+        <link rel="manifest" type="application/manifest+json" href="./resources/icons/icons.webmanifest">
+        <link rel="icon" href="./resources/images/logo/" type="image/x-icon">
+        <script src="./stars.js"></script>
+    </head>
+    <body>
+        <div class="header" id="header">
+            <div class="container">
+                <div class="logo">
+                    <a href="./index.html"><img src="./resources/images/logo/logo.jpg" alt="Logo"></a>
+                </div>
+                <nav class="navbar">
+                    <div class="onglets">
+                        <a href="./index.html">Home</a>
+                        <a href="./projects.html">Projects</a>
+                        <a href="./about-me.html">About Me</a>
+                        <a href="./index.html#contacts">Contact</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="text-header" id="text-header">
+                <div class="links">
+                    <h1>Projects</h1>
+                    <div class="socials">
+                        <a href="https://github.com/iTschoCapic"><img src="./resources/images/logo/GitHub.png" alt="GitHub Logo"></a>
+                        <a href="https://www.linkedin.com/in/renaud-machecourt-bourgeois/"><img src="./resources/images/logo/LinkedIn.png" alt="LinkedIn Logo"></a>
+                        <a href="mailto:renaud.mb.58@gmail.com"><img src="./resources/images/logo/Gmail.png" alt=""></a>
+                        <a href="./resources/MACHECOURT-BOURGEOIS_Renaud-Curriculum-Vitae.pdf" download><img src="./resources/images/logo/cv2.png" alt=""></a>
+                    </div>
+                </div>
+                    
+                <img src="./resources/images/photo.jpg" alt="">
+                <div class="stars_animation">
+                    <div id="stars"></div>
+                    <div id="stars2"></div>
+                    <div id="stars3"></div>
+
+                    <div id="shooting-star"></div>
+                </div>
+            </div>
+        </div>
+        <main>
+            <div class="projects" id="projects">
+                <h2>Projects</h2>
+                <div class="cards-container">
+                    <div class="card">
+                        <h3>Le Castell Canet - Website</h3>
+                        <img src="./resources/images/lecastellcanet.png" alt="Le Castell Canet">
+                        <p>Developed a <b>full-stack website</b> from concept to deployment, handling both front-end and back-end development tasks.</p>
+                        <a href="./projects/lecastellcanet.html">See more...</a>
+                        <div class="technologies">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JS</span>
+                            <span>FTP</span>
+                            <span>GitHub</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>W.I.P. Geometrical Modelisation Quadtree - Unity</h3>
+                        <img src="./resources/images/background.png" alt="3D volumetric representation of a sphere">
+                        <p>I developed a <b>recursive algorithm</b> to create a <b>3D volumetric representation of spheres using spatial enumeration</b>. The approach involves subdividing a bounding box into smaller cubes, allowing for efficient representation and manipulation of 3D objects. The algorithm supports the addition of multiple spheres, dynamically adjusting the bounding box to encompass all objects.</p>
+                        <a href="./projects/geomod.html">See more...</a>
+                        <div class="technologies">
+                            <span>C#</span>
+                            <span>Unity</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>W.I.P. Havoc - Unity</h3>
+                        <img src="./resources/images/WIP.png" alt="">
+                        <p>A 3D fps low poly game</p>
+                        <a href ="#">See more...</a>
+                        <div class="technologies">
+                            <span>C#</span>
+                            <span>Unity</span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>Ubomb - Custom Engine</h3>
+                        <img src="./resources/images/ubomb.png" alt="">
+                        <p>UBomb is a <b>2D video game</b> where the player must rescue a princess from evil green monsters by navigating through various worlds. The player uses bombs to destroy obstacles and enemies, and keys to open locked doors. The game features <b>destructible objects</b>, monsters with <b>increasing difficulty</b>, and <b>collectible items</b> like bombs and keys. The objective is to reach the princess and win the game.</p>
+                        <a href="https://github.com/iTschoCapic/Ubomb">See more...</a>
+                        <div class="technologies">
+                            <span>Java</span>
+                            <span>JavaFX</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>AI pathfinding A* & Dijkstra - Unity</h3>
+                        <img src="./resources/images/AI-AStarDijkstra.png" alt="">
+                        <p>The goal of this game is to capture as many tiles on the grid as possible. Two competing algorithms, <b>A* and Dijkstra</b>, alternate turns, each attempting to claim tiles by expanding their paths. A tile can be recaptured by the opponent if it's not currently owned. The challenge lies in <b>strategically navigating the grid</b> to maximize your captured tiles while potentially reclaiming tiles from your competitor. The game tests the <b>efficiency and adaptability</b> of both algorithms in real-time.</p>
+                        <a href="https://github.com/iTschoCapic/IA_pathfinding_AStar_Dijkstra-">See more...</a>
+                        <div class="technologies">
+                            <span>C#</span>
+                            <span>Unity</span>
+                            <span>AI</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>LightUp - Custom Engine</h3>
+                        <img src="./resources/images/lightup.png" alt="">
+                        <p>Light Up is a <b>single-player puzzle game</b> in the Simon Tatham's Puzzle Collection. The goal is to <b>illuminate all blank squares</b> on a grid by placing light bulbs on some of them. Each <b>light bulb</b> lights up its square and those in the same row or column unless blocked by black squares. The <b>black squares</b> may be numbered, indicating how many light bulbs must be adjacent to them. The game has four main types of squares: <b>blank, light bulbs, black walls (numbered or not), and marks</b>. The objective is to light all non-black squares, avoid lighting one light by another, and satisfy the number of lights around numbered black squares.</p>
+                        <a href="https://github.com/iTschoCapic/lightup">See more...</a>
+                        <div class="technologies">
+                            <span>C</span>
+                            <span>CMake</span>
+                            <span>SDL</span>
+                            <span>GitHub</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="contacts" id="contacts">
+                <h2>Contact:</h2>
+                <div class="github"><a href="https://github.com/iTschoCapic"><img src="./resources/images/logo/GitHub.png" alt="GitHub Logo"></a></div>
+                <div class="linkedin"><a href="https://www.linkedin.com/in/renaud-machecourt-bourgeois/"><img src="./resources/images/logo/LinkedIn.png" alt="LinkedIn Logo"></a></div>
+                <div class="mail"><a href="mailto:renaud.mb.58@gmail.com"><img src="./resources/images/logo/Gmail.png" alt=""></a></div>
+                <div class="curriculum-vitae"><a href="./resources/MACHECOURT-BOURGEOIS_Renaud-Curriculum-Vitae.pdf" download><img src="./resources/images/logo/cv2.png" alt=""></a></div>
+            </div>
+        </footer>
+    </body>
+</html>
