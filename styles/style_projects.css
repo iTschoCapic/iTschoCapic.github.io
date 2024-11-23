@@ -4,29 +4,13 @@
     --background: #18111B;      /* 1 */
     --foreground: #1E1523;      /* 2 */
 
-    --muted: ;
-    --muted-foreground: ;
-
-    --accent: ;
-    --accent-foreground: ;
-
-    --popover: ;
-    --popover-foreground: ;
-
     --border: #54346B;          /* 6 */
-    --input: ;
 
     --card: #301C3B;            /* 3 */
     --card-foreground: #3D224E; /* 4 */
 
     --primary: #ECD9FA;
     --primary-foreground: #D19DFF;
-
-    --secondary: ;
-    --secondary-foreground: ;
-
-    --destructive: ;
-    --destructive-foreground: ;
 
     --ring: #664282;            /* 7 */
 
@@ -385,7 +369,42 @@ footer .contacts {
 }
 
 @media (max-width: 768px) {
-    .skills .categories-container {
-        grid-template-columns: 1fr;
+    
+    .navbar {
+        white-space: nowrap;
+    }
+
+    .navbar a {
+        padding: 0.5rem 0.5rem;
+    }
+
+    .header .text-header {
+        min-height: 50rem;
+        max-height: 50rem;
+        align-items: start;
+    }
+    
+    .header .text-header .links {
+        margin: 0rem 0rem 0rem 1rem;
+    }
+    
+    .header .text-header .photo {
+        position: absolute;
+        width: 20rem;
+        margin: 28rem 0rem 0rem 3rem;
+    }
+
+    main .projects .cards-container {
+        grid-template-columns: repeat(1, 3fr);
+        width: 20rem;
+    }
+    
+    main .projects .cards-container .card {
+        width: 20rem;
+    }
+
+    main .projects .cards-container .card img {
+        max-width: 19.7rem;
+        height: 10rem;
     }
 }
