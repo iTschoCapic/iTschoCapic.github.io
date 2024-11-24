@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: Catamaran;
 }
 
-p, .skill, a {
+p, a, span {
     font-family: 'M PLUS 2';
 }
 
@@ -185,6 +185,12 @@ body .header .logo a img {
     width: 1.5rem;
     height: 1.5rem;
     background-color: transparent;
+    transition: ease-in-out 0.2s;
+}
+
+.header .text-header .links .socials a:hover {
+    margin-top: -3px;
+    transition: ease-in-out 0.2s;
 }
 
 .header .text-header .links .socials a img {
