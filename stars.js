@@ -23,9 +23,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const stars3 = document.getElementById('stars3');
   
     // Set the box-shadows for each element
-    stars.style.boxShadow = multipleBoxShadow(700);
-    stars2.style.boxShadow = multipleBoxShadow(200);
-    stars3.style.boxShadow = multipleBoxShadow(100);
+    stars.style.boxShadow = multipleBoxShadow(2800);
+    stars2.style.boxShadow = multipleBoxShadow(800);
+    stars3.style.boxShadow = multipleBoxShadow(400);
 
     shootingBoxShadow();
     setInterval(shootingBoxShadow, 9900);

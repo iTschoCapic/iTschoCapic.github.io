@@ -5,11 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Welcome to my website/portfolio showing my work in game development">
         <meta property="og:title" content="Renaud MACHECOURT-BOURGEOIS">
-        <title>Geometrical Modelisation Quadtree | Renaud Machecourt</title>
+        <title>Geometrical Modelisation Octree | Renaud Machecourt</title>
         <link rel="stylesheet" href="../styles/style_geomod.css">
         <link rel="stylesheet" href="../styles/planetes.css">
+        <link rel="stylesheet" href="../styles/stars.css">
         <link rel="manifest" type="application/manifest+json" href="./resources/icons/icons.webmanifest">
         <link rel="icon" href="./resources/images/logo/" type="image/x-icon">
+        <script src="../stars.js"></script>
     </head>
     <body>
         <div class="header" id="header">
@@ -28,7 +30,7 @@
             </div>
             <div class="text-header" id="text-header">
                 <div class="links">
-                    <h1>Geometrical Modelisation Quadtree</h1>
+                    <h1>Geometrical Modelisation Octree</h1>
                     <div class="socials">
                         <a href="https://github.com/iTschoCapic"><img src="../resources/images/logo/GitHub.png" alt="GitHub Logo"></a>
                         <a href="https://www.linkedin.com/in/renaud-machecourt-bourgeois/"><img src="../resources/images/logo/LinkedIn.png" alt="LinkedIn Logo"></a>
@@ -37,7 +39,14 @@
                     </div>
                 </div>
                     
-                <img src="../resources/images/background.png" alt="" class="photo">
+                <img src="../resources/images/geomod.png" alt="" class="photo">
+                <div class="stars_animation">
+                    <div id="stars"></div>
+                    <div id="stars2"></div>
+                    <div id="stars3"></div>
+
+                    <div id="shooting-star"></div>
+                </div>
                 <div class="planetes_animation">
                     <div id="mercury"></div>
                     <div id="venus"></div>
@@ -51,9 +60,9 @@
             </div>
         </div>
         <main>
-            <h2>Adaptative Quadtree Algorithm for 3D volumetric representation of spheres using spatial enumeration</h2>
+            <h2>Adaptative Octree Algorithm for 3D volumetric representation of spheres using spatial enumeration</h2>
             <p>I achieved this during the course named "Geometrical Modelisation". We most of the time work on rendering shapes and models in 3D and then apply algorithm to them. It can range from calculating vertices, triangles and normals to render a model, to mesh simplification and subdivision.</p>
-            <!-- <p><a href="https://github.com/iTschoCapic/modelisation_geometrique">GitHub repository</a> of the project</p> -->
+            <p><a href="https://github.com/iTschoCapic/modelisation_geometrique">GitHub repository</a> of the project</p>
             </p>
             <h3>Bounding Boxes</h3>
                 <p><i>This method generates a bounding box for a given sphere in 3D space. A bounding box is the smallest axis-aligned rectangular box that completely encloses the sphere, useful for optimizing collision detection and spatial queries in 3D applications. The method takes a Sphere object as input, which includes the sphere'ws center (sphere.position) and its radius (sphere.radius).</i></p>
