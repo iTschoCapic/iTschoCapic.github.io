@@ -194,6 +194,7 @@ body .header .logo a img {
     border-radius: 0.5rem;
     width: 60rem;
     margin-right: 10rem;
+    background-color: transparent;
 }
 
 /* -------------------------------------------------- */

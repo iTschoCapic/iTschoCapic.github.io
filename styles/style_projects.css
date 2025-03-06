@@ -283,11 +283,13 @@ main .projects .cards-container .card img {
     opacity: 0.8;
     margin-bottom: -0.3rem;
     transition: ease-in-out 0.2s;
+    background-color: transparent;
 }
 
 main .projects .cards-container .card:hover img {
     opacity: 1;
     transition: ease-in-out 0.2s;
+    background-color: var(--card);
 }
 
 main .projects .cards-container .card p {
