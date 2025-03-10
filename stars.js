@@ -7,8 +7,8 @@ function multipleBoxShadow(n) {
 }
 
 function shootingBoxShadow() {
-    const shootingstar = document.getElementById('shooting-star');
-    shootingstar.style.boxShadow = `0px ${random(window.innerHeight)}px #FFF`;
+    const shootingStar = document.getElementById('shooting-star');
+    shootingStar.style.boxShadow = `0px ${random(window.innerHeight)}px #FFF`;
 }
   
   // Helper function to generate a random number
