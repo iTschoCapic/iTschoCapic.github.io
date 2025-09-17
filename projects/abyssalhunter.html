@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Welcome to my website/portfolio showing my work in game development">
+        <meta property="og:title" content="Renaud MACHECOURT-BOURGEOIS">
+        <title>Abyssal Hunter | Renaud Machecourt</title>
+        <link rel="stylesheet" href="../styles/style_abyssalhunter.css">
+        <link rel="stylesheet" href="../styles/stars.css">
+        <link rel="manifest" type="application/manifest+json" href="./resources/icons/icons.webmanifest">
+        <link rel="icon" href="./resources/images/logo/" type="image/x-icon">
+        <script src="../stars.js"></script>
+        <script src="../blackhole.js"></script>
+    </head>
+    <body>
+        <div class="header" id="header">
+            <div class="container">
+                <div class="logo">
+                    <a href="../index.html"><img src="../resources/images/logo/logo.jpg" alt="Logo"></a>
+                </div>
+                <nav class="navbar">
+                    <div class="onglets">
+                        <a href="../index.html">Home</a>
+                        <a href="../projects.html">Projects</a>
+                        <a href="../about-me.html">About Me</a>
+                        <a href="../index.html#contacts">Contact</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="text-header" id="text-header">
+                <div class="links">
+                    <h1>Abyssal Hunter</h1>
+                    <div class="socials">
+                        <a href="https://github.com/iTschoCapic" target="_blank"><img src="../resources/images/logo/GitHub.png" alt="GitHub Logo"></a>
+                        <a href="https://www.linkedin.com/in/renaud-machecourt-bourgeois/" target="_blank"><img src="../resources/images/logo/LinkedIn.png" alt="LinkedIn Logo"></a>
+                        <a href="mailto:renaud.mb.58@gmail.com"><img src="../resources/images/logo/Gmail.png" alt=""></a>
+                        <a href="../resources/MACHECOURT-BOURGEOIS_Renaud-Curriculum-Vitae.pdf" download><img src="../resources/images/logo/cv2.png" alt=""></a>
+                    </div>
+                </div>
+                    
+                <div class="illustration">
+                    <img src="../resources/images/npe.png" alt="" class="photo">
+                    <p>Illustration by : <a href="https://www.linkedin.com/in/aalyah-poncet-979b1324a/">Aalyah Poncet</a></p>
+                </div>
+                
+                <div class="stars_animation">
+                    <div id="stars"></div>
+                    <div id="stars2"></div>
+                    <div id="stars3"></div>
+
+                    <div id="shooting-star"></div>
+                </div>
+            </div>
+        </div>
+        <main>
+            <h2>Abyssal Hunter</h2>
+            <p>Abyssal Hunter is a multiplayer prototype developed during my internship with independent game developer Mehdi Merrouche, for my Master 2 at Gamagora (Université Lyon 2). Designed for PC with Unity, the project aims to deliver a vertical slice combining survival, crafting, and cooperative exploration mechanics in a hostile underwater setting.</p>
+             <p><b>Dont forget to check the <a href="https://www.linkedin.com/company/goober-studio/">LinkedIn</a> of our project!</b></p>
+            </p>
+            <h3>Overview</h3>
+                <p>Set in a mysterious abyssal world, Abyssal Hunter challenges players to explore, survive, and cooperate in an unforgiving environment. Players must use their tools and ingenuity to traverse vertical spaces, gather resources, craft equipment, and overcome both environmental dangers and networked challenges. Key to the design is multiplayer cooperation: every action—from climbing and grappling to crafting gear—must be synchronized across clients to ensure smooth and engaging gameplay.</p>
+            <h3>Game Features</h3>
+                
+                <p><b>Multiplayer Survival & Crafting</b>: Players can collect resources, craft equipment, and share items thanks to a synchronized inventory system.</p>
+                <p><b>Advanced Movement Mechanics</b>: Variable jump heights, climbing grips, grappling hook, and fully animated rope physics with bones.</p>
+                <p><b>Interactive Systems</b>: Crafting stations, bestiary, and item-based interactions built with Unity ScriptableObjects for scalability.</p>
+                <p><b>Networked Gameplay</b>: Fully integrated client/server model with Netcode for GameObjects, enabling remote connections and real-time cooperation.</p>
+                <p><b>UI/UX for Multiplayer</b>: Inventory menus, crafting screens, and bestiary implemented with usability and clarity in mind.</p>
+
+            <h3>Development Details</h3>
+                <p>The prototype was developed using Unity (C#) with a strong focus on multiplayer networking. Development followed a structured approach similar to Agile workflows: milestones were defined, features prioritized, and regular testing ensured synchronization stability.</p>
+                <br>
+                <h4>Tools & Technologies:</h4>
+                    <p>Unity 2023, C#</p>
+                    <p>Netcode for GameObjects (multiplayer)</p>
+                    <p>Spine (2D animation)</p>
+                    <p>Git/GitHub (version control & collaboration)</p>
+                    <p>ClickUp (task tracking)</p>
+            <h3>My Contribution</h3>
+                <p>As the main developer on the project, I was responsible for:</p>
+                <br>
+                <ul>
+                    <li>Designing and implementing movement mechanics (variable jump, grip system, grappling hook, rope animation).</li>
+                    <li>Developing a crafting and inventory system using ScriptableObjects for easy extension.</li>
+                    <li>Creating multiplayer interactions: session creation/joining, synchronized crafting, and resource sharing.</li>
+                    <li>Implementing UI/UX components (inventory, crafting menu, bestiary) with multiplayer support.</li>
+                    <li>Troubleshooting and optimizing network synchronization issues (state management, ownership, latency).</li>
+                </ul>
+                <br>
+                <p>The final result was a fully playable MVP with around ten functional multiplayer mechanics, a working connection loop, and a gameplay foundation suitable for demos and further production.</p>
+            <h3>Target Audience</h3>
+                <p>Abyssal Hunter is aimed at fans of cooperative survival games such as The Forest, Subnautica: Below Zero, and Raft. Its focus on resource management, mobility, and teamwork makes it appealing both to casual co-op players and to streamers looking for emergent, dynamic gameplay moments. </p>
+            <h3>Current Development Status</h3>
+                <p>This MVP serves as a proof of concept for future development into a complete cooperative survival experience.</p>
+            <h3>Conclusion</h3>
+                <p>Developing Abyssal Hunter was both a technical challenge and an opportunity to explore multiplayer game design in depth. From gameplay mechanics to networking solutions, I contributed to building a playable prototype that balances cooperation, crafting, and mobility.</p>
+                <br>
+                <p>This project not only honed my skills in Unity multiplayer development but also demonstrated my ability to deliver a functional game prototype from concept to MVP within a professional framework.</p>
+        </main>
+        <footer>
+            <div class="contacts">
+                <h2>Contact:</h2>
+                <div class="github"><a href="https://github.com/iTschoCapic" target="_blank"><img src="../resources/images/logo/GitHub.png" alt="GitHub Logo"></a></div>
+                <div class="linkedin"><a href="https://www.linkedin.com/in/renaud-machecourt-bourgeois/" target="_blank"><img src="../resources/images/logo/LinkedIn.png" alt="LinkedIn Logo"></a></div>
+                <div class="mail"><a href="mailto:renaud.mb.58@gmail.com"><img src="../resources/images/logo/Gmail.png" alt=""></a></div>
+                <div class="curriculum-vitae"><a href="../resources/MACHECOURT-BOURGEOIS_Renaud-Curriculum-Vitae.pdf" download><img src="../resources/images/logo/cv2.png" alt=""></a></div>
+            </div>
+        </footer>
+    </body>
+</html>

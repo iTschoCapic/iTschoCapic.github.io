@@ -466,6 +466,10 @@ footer .contacts {
     background-color: var(--background);
 }
 
+footer .contacts h2 {
+    background-color: var(--background);
+}
+
 @media (max-width: 768px) {
     
     .navbar {
